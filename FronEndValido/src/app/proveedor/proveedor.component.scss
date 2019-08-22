@@ -1,0 +1,13 @@
+table {
+    width: 1000%;
+    border: 1px solid green;
+}
+
+th,
+td {
+    width: 25%;
+    text-align: left;
+    border: 1px solid green;
+    vertical-align: top;
+    border-collapse: collapse;
+}

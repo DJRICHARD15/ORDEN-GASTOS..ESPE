@@ -1,0 +1,108 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title">Órdenes De Gasto</h4>
+                <p class="card-category">
+                    Sistema para generar órdesnes de pagos ESPE.
+                </p>
+                <div class="row">
+                    <div class="subitem col-lg-6 rowup col-md-3 col-sm-3"></div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="card-body">
+                    <table class="table">
+                        <div class="col-12">
+                            <table class="table">
+                                <div class="col-12">
+                                    <form class="col s6">
+                                        <div class="col-12">
+                                            <th>
+                                                Tipo de Pago
+                                                <select [(ngModel)]="ordenGasto.tipo_pago" name="Tipo de pago" id="Tipo_contrato" class="form-control">
+                                                                    <option selected>Mensual</option>
+                                                                    <option selected>Dia</option>
+                                                                    <!-- <option selected>100%</option> -->
+                                                                  </select>
+                                            </th>
+
+                                            <th>
+                                                Ordinal
+                                                <input [(ngModel)]="ordenGasto.id_orden" type="number" id="Orden" name="Orden" min="1" pattern="^[0-9]+" placeholder="ORD" mainlength="15" maxlength="100 " class="form-control" size="10" required />
+
+                                                <th>
+                                                    <th> Valor Contrato
+                                                        <input [(ngModel)]="ordenGasto.numero_contrato" type="number" id="Orden" name="Orden" min="1" pattern="^[0-9]+" placeholder="Valor Contrato" mainlength="15" maxlength="100 " class="form-control" size="10" required />
+
+                                                        <th>
+                                                            <th>
+                                                                Cantidad
+                                                                <input [(ngModel)]="ordenGasto.cantidad" type="number" id="Cantidad" name="Cantidad" min="1" pattern="^[0-9]+" placeholder="Cantidad" mainlength="15" maxlength="100 " class="form-control" size="10" required />
+
+                                                            </th>
+
+                                                            <th>
+                                                                Saldo Inicial
+                                                                <input [(ngModel)]="ordenGasto.saldo" type="number" id="PreUni" name="PreUni" min="1" pattern="^[0-9]+" placeholder="Saldo inicial" mainlength="15" maxlength="100 " class="form-control" size="10" required />
+
+                                                            </th>
+                                                            <div class="col-15">
+                                                            </div>
+
+                                                            <th>
+                                                                IVA
+                                                                <input [(ngModel)]="ordenGasto.obtencion_iva" type="number" step="0.01" id="Iva" name="Iva" placeholder=" 0.12" min="0" pattern="\^[0-9]${0,2}\" mainlength="15" maxlength="666" class="form-control" size="25" required />
+
+                                                            </th>
+
+                                                            <th>
+                                                                Otros Impuestos
+                                                                <input [(ngModel)]="ordenGasto.obtencion_otro_impuesto" type="number" step="0.01" id="OtrImp" name="OtrImp" placeholder="0.15" min="0" pattern="^[0-9]+" mainlength="15" maxlength="666" class="form-control" size="25" />
+                                                            </th>
+
+
+
+                                                            <th>
+                                                                Descripción
+                                                                <input [(ngModel)]="ordenGasto.descripcion" type="text" id="Descripcion" name="Descripcion" placeholder="Descripción" mainlength="15" maxlength="666" class="form-control" size="80" required />
+
+                                                            </th>
+
+                                                            <th>
+                                                                Meses o Dias
+                                                                <input [(ngModel)]="ordenGasto.meses_acumulables" type="number" id="Descripcion" name="Descripcion"  mainlength="15" maxlength="666" class="form-control" size="80" required />
+
+                                                            </th>
+                                                            <br>
+
+                                                            <th>
+                                                                <th>
+                                                                    Fecha Hora Inicio
+                                                                    <input [(ngModel)]="ordenGasto.fechaHoraIni" type="date" id="horaFech" name="horaFech" placeholder="Hora Fecha" mainlength="15" maxlength="666" class="form-control" size="25" required />
+
+                                                                </th>
+
+
+
+
+                                        </div>
+                                    </form>
+                                    <button type="submit" class="btn btn-success" (click)="btnClickHome()" (click)="crearOActualizarOrdenGasto(ordenGasto)">Guardar</button>
+                                    <style type="text/css">
+                                        option {
+                                            font-family: Verdana, Arial;
+                                            font-size: 12px;
+                                            background-color: #e9e9e9;
+                                        }
+                                    </style>
+                                </div>
+                            </table>
+                        </div>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
